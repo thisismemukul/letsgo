@@ -14,4 +14,6 @@ func slice() {
 	cards.saveToFile("my_cards")
 	newDeck := newDeckFromFile("my_cards.txt")
 	newDeck.print()
+	newDeck.shuffle()
+	newDeck.print()
 }
