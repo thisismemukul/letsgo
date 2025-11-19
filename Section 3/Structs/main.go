@@ -22,8 +22,12 @@ func main() {
 			zipCode: 12345,
 		},
 	}
+	mukul.print()
 
 	fmt.Printf("%+v\n", mukul)
+
+	mukul.updateName("Mukul Saini")
+	mukul.print()
 
 	alex := person{
 		firstName: "Alex",
@@ -33,7 +37,19 @@ func main() {
 			zipCode: 54321,
 		},
 	}
+	alex.print()
 
 	fmt.Printf("%+v\n", alex)
 
+	alex.updateName("Alex Anderson")
+	alex.print()
+
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
+}
+
+func (p *person) updateName(newFirstName string) {
+	p.firstName = newFirstName
 }
