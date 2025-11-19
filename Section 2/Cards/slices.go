@@ -10,4 +10,8 @@ func slice() {
 	hand.print()
 	fmt.Println("Remaining:")
 	remaining.print()
+	fmt.Println(cards.toString())
+	cards.saveToFile("my_cards")
+	newDeck := newDeckFromFile("my_cards.txt")
+	newDeck.print()
 }
