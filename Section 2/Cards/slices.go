@@ -1,8 +1,13 @@
 package main
 
-func slice() {
-	cards := deck{"1", newCard()}
-	cards = append(cards, "2")
+import "fmt"
 
-	cards.print()
+func slice() {
+	cards := newDeck()
+	// cards = append(cards, "2")
+	hand, remaining := deal(cards, 5)
+	fmt.Println("Hand:")
+	hand.print()
+	fmt.Println("Remaining:")
+	remaining.print()
 }
