@@ -14,6 +14,8 @@ func main() {
 	sb := spanishBot{}
 	printGreeting(eb)
 	printGreeting(sb)
+
+	runAreaDemo()
 }
 
 func printGreeting(b bot) {
